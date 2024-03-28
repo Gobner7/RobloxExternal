@@ -34,7 +34,7 @@ const char *RobloxInstance::GetInstanceClassName() {
         return "Unknown";
     } else {
         auto isNestedPointer = this->m_pRune->ReadQword(rpClassName + oxorany(0x18));
-        if (isNestedPointer == oxorany(0x1F)) {
+childOff = CHILDREN_OFFSET; // Update this offset based on atg-source
             rpClassName = this->m_pRune->ReadQword(rpClassName);
         }
         return this->m_pRune->ReadString(rpClassName);
